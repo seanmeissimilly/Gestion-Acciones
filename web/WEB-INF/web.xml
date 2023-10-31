@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <welcome-file-list>
+        <welcome-file>
+            login.jsp
+        </welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>dasboard</servlet-name>
+        <jsp-file>/panel.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>Controlador</servlet-name>
+        <servlet-class>Controlador.Controlador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>accion</servlet-name>
+        <jsp-file>/accion_add.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>Error 404</servlet-name>
+        <jsp-file>/404.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>Añadir Accion</servlet-name>
+        <jsp-file>/accion_add.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>Editar Accion</servlet-name>
+        <jsp-file>/accion_edit.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>Error 500</servlet-name>
+        <jsp-file>/500.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dasboard</servlet-name>
+        <url-pattern>/dashboard</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>accion</servlet-name>
+        <url-pattern>/accion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Controlador</servlet-name>
+        <url-pattern>/Controlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Error 404</servlet-name>
+        <url-pattern>/404</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Añadir Accion</servlet-name>
+        <url-pattern>/accion_add</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Editar Accion</servlet-name>
+        <url-pattern>/accion_edit</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Error 500</servlet-name>
+        <url-pattern>/500</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/404.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/500.jsp</location>
+    </error-page>
+</web-app>

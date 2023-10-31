@@ -1,0 +1,13 @@
+<!-- Reviso si ya se ha logueado -->
+<%
+    String user;
+    HttpSession sesion = request.getSession();
+    if (sesion.getAttribute("login") == null
+            || sesion.getAttribute("login").equals("0")) {
+        response.sendRedirect("login.jsp");
+        return;
+    }
+    user = sesion.getAttribute("user").toString();
+    sesion.setAttribute("user", user);
+
+%>
